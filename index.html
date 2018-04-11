@@ -4,35 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>First React App</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/index-styles.css">
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 <body>
-
-<!--Start of  hero -->
-
-<!--End of hero -->
-
-
-<!--Start of nav -->
-
-<!--End of nav -->
-
-
-<!--Start of content -->
-
-<!--End of Content -->
-
-
-<!--Start of footer -->
-
-<!--End of footer -->
-
+    <div id='app'></div>
 
 <!--Start of javascript -->
+
+    <script type = 'text/babel'>
+
+      const name ='Angels'
+      const handle ="@angelrosales"
+
+      function NameComponent (props){
+        return <h1>{props.name}</h1>
+      }
+
+      function HandleComponent (props){
+        return <h3>{props.handle}</h3>
+      }
+
+      function App () {
+        return (
+          <div id='container'>
+          <NameComponent name = {name}/>
+          <HandleComponent handle = {handle}/>
+          </div>
+        )
+      }
+
+      ReactDOM.render(<App/>, document.getElementById('app'))
+
+
+    </script>
+
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="js/bootstrap.min.js"> </script>
+  <script src="js/prac.js"></script>
 <!--End of javascript -->
 </body>
 </html>
